@@ -7,8 +7,8 @@ const assertEqual = function(actual, expected) {
   return console.log(`${failed} Assertion Failed: ${actual} !== ${expected}`);
 };
 
-const tail = function(array, n = 1) {
-  return array.slice(n);
+const tail = function(array) {
+  return array.slice(1);
 };
 
 // Test Case: Check the original array
@@ -33,4 +33,3 @@ console.log(resultTwo);
 const resultThree = tail([]);
 assertEqual(resultThree.length, 0); // ensure we get back zero elements
 console.log(resultThree);
-
