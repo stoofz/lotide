@@ -1,5 +1,4 @@
 const assertEqual = function(actual, expected) {
-  //console.assert(actual === expected);
   const passed = String.fromCodePoint(0x2705, 0x2705, 0x2705);
   const failed = String.fromCodePoint(0x274C, 0x274C, 0x274C);
   if (actual === expected) {
@@ -8,10 +7,12 @@ const assertEqual = function(actual, expected) {
   return console.log(`${failed} Assertion Failed: ${actual} !== ${expected}`);
 };
 
+const head = function(array) {
+  return array[0];
+};
 
 // Test Cases
-assertEqual("Lighthouse", "Lighthouse");
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual(1, 3);
-
+assertEqual(head([5,6,7]), 5);
+assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+assertEqual(head([]), "Hello");
+assertEqual(head(["Hello"]), "Hello");
