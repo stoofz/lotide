@@ -1,5 +1,4 @@
 const assertEqual = function(actual, expected) {
-  //console.assert(actual === expected);
   const passed = String.fromCodePoint(0x2705, 0x2705, 0x2705);
   const failed = String.fromCodePoint(0x274C, 0x274C, 0x274C);
   if (actual === expected) {
