@@ -16,6 +16,7 @@ const assertArraysEqual = function(array1, array2) {
   return console.log(`${failed} Assertion Failed: ${array1} !== ${array2}`);
 };
 
+// Test Cases
 assertArraysEqual([1, 2, 3], [1, 2, 3]);
 assertArraysEqual([1, 3], [1, 2, 3]);
 assertArraysEqual([1, 4, 3], [1, 2, 3]);

@@ -27,6 +27,7 @@ const middle = function(array) {
   return middleValues;
 };
 
+// Test Cases
 assertArraysEqual(middle([1]), []);
 assertArraysEqual(middle([1, 2]), []);
 assertArraysEqual(middle([1, 2, 3]), [2]);
