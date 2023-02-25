@@ -1,4 +1,5 @@
 const assertEqual = function(actual, expected) {
+
   const passed = String.fromCodePoint(0x2705, 0x2705, 0x2705);
   const failed = String.fromCodePoint(0x274C, 0x274C, 0x274C);
   if (actual === expected) {
@@ -17,11 +18,17 @@ const eqArrays = function(array1, array2) {
 };
 
 // Test Cases
-console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
-console.log(eqArrays([1, 2, 3], [3, 2, 1])); // => false
+//console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
 
-console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
+//console.log(eqArrays([1, 2, 3], [3, 2, 1])); // => false
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);
+
+//console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);
+
+//console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
 
