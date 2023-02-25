@@ -7,13 +7,13 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
-const assertArraysEqual = function(array1, array2) {
+const assertArraysEqual = function(actual, expected) {
   const passed = String.fromCodePoint(0x2705, 0x2705, 0x2705);
   const failed = String.fromCodePoint(0x274C, 0x274C, 0x274C);
-  if (eqArrays(array1, array2)) {
-    return console.log(`${passed} Assertion Passed: ${array1} === ${array2}`);
+  if (eqArrays(actual, expected)) {
+    return console.log(`${passed} Assertion Passed: ${actual} === ${expected}`);
   }
-  return console.log(`${failed} Assertion Failed: ${array1} !== ${array2}`);
+  return console.log(`${failed} Assertion Failed: ${actual} !== ${expected}`);
 };
 
 const flatten = function(array) {
