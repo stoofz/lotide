@@ -8,7 +8,7 @@ const eqArrays = function(array1, array2) {
 };
 
 
-const eqObjects = function (object1, object2) {
+const eqObjects = function(object1, object2) {
   
   const objOne = Object.keys(object1);
   const objTwo = Object.keys(object2);
