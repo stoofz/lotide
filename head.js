@@ -14,5 +14,5 @@ const head = function(array) {
 // Test Cases
 assertEqual(head([5,6,7]), 5);
 assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head([]), "Hello");
+assertEqual(head([]), "Hello"); // Fail
 assertEqual(head(["Hello"]), "Hello");
