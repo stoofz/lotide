@@ -1,16 +1,18 @@
-const eqArrays = function(array1, array2) {
+// const eqArrays = function(array1, array2) {
   
-  if (array1.length !== array2.length) {
-    return false;
-  }
+//   if (array1.length !== array2.length) {
+//     return false;
+//   }
 
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+//   for (let i = 0; i < array1.length; i++) {
+//     if (array1[i] !== array2[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+
+const eqArrays = require('./eqArrays');
 
 const assertArraysEqual = function(actual, expected) {
   const passed = String.fromCodePoint(0x2705, 0x2705, 0x2705);
@@ -20,6 +22,8 @@ const assertArraysEqual = function(actual, expected) {
   }
   return console.log(`${failed} Assertion Failed: ${actual} !== ${expected}`);
 };
+
+module.exports = assertArraysEqual;
 
 // Test Cases
 assertArraysEqual([1, 2, 3], [1, 2, 3]); // Pass

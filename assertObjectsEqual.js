@@ -1,43 +1,43 @@
-const eqArrays = function(array1, array2) {
+// const eqArrays = function(array1, array2) {
   
-  if (array1.length !== array2.length) {
-    return false;
-  }
+//   if (array1.length !== array2.length) {
+//     return false;
+//   }
 
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+//   for (let i = 0; i < array1.length; i++) {
+//     if (array1[i] !== array2[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
 
-
-const eqObjects = function(object1, object2) {
+// const eqObjects = function(object1, object2) {
   
-  const objOne = Object.keys(object1);
-  const objTwo = Object.keys(object2);
+//   const objOne = Object.keys(object1);
+//   const objTwo = Object.keys(object2);
 
-  if (objOne.length !== objTwo.length) {
-    return false;
-  }
+//   if (objOne.length !== objTwo.length) {
+//     return false;
+//   }
 
-  for (const prop1 of Object.keys(object1)) {
+//   for (const prop1 of Object.keys(object1)) {
 
-    if (Array.isArray(object1[prop1])) {
-      if (eqArrays(object1[prop1], object2[prop1]) !== false) {
-        continue;
-      }
-      return false;
-    }
+//     if (Array.isArray(object1[prop1])) {
+//       if (eqArrays(object1[prop1], object2[prop1]) !== false) {
+//         continue;
+//       }
+//       return false;
+//     }
 
-    if (object1[prop1] !== object2[prop1]) {
-      return false;
-    }
-  }
-  return true;
-};
+//     if (object1[prop1] !== object2[prop1]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
 
+const eqObjects = require('./eqObjects');
 
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
@@ -50,6 +50,7 @@ const assertObjectsEqual = function(actual, expected) {
   return console.log(`${failed} Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
 };
 
+module.exports = assertObjectsEqual;
 
 // Test Cases
 
