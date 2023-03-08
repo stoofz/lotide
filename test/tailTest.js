@@ -1,5 +1,6 @@
 const assert = require('chai').assert;
-const tail = require('../tail');
+const { tail } = require("../index");
+
 
 const resultOne = tail(["Hello", "Lighthouse", "Labs"]);
 const resultTwo = tail(["Hello"]);
