@@ -1,12 +1,3 @@
-// const assertEqual = function(actual, expected) {
-//   const passed = String.fromCodePoint(0x2705, 0x2705, 0x2705);
-//   const failed = String.fromCodePoint(0x274C, 0x274C, 0x274C);
-//   if (actual === expected) {
-//     return console.log(`${passed} Assertion Passed: ${actual} === ${expected}`);
-//   }
-//   return console.log(`${failed} Assertion Failed: ${actual} !== ${expected}`);
-// };
-
 const assertEqual = require('./assertEqual');
 
 const countLetters = function(sentanceString) {
@@ -23,9 +14,6 @@ const countLetters = function(sentanceString) {
 };
 
 // Test Cases
-
-//console.log(countLetters('LHL'));
-//console.log(countLetters("lighthouse in the house"));
 
 const result = countLetters('LHL');
 assertEqual(result["L"], 2);

@@ -1,47 +1,4 @@
-// const eqArrays = function(array1, array2) {
-  
-//   if (array1.length !== array2.length) {
-//     return false;
-//   }
-
-//   for (let i = 0; i < array1.length; i++) {
-//     if (array1[i] !== array2[i]) {
-//       return false;
-//     }
-//   }
-//   return true;
-// };
-
-// const assertArraysEqual = function(actual, expected) {
-//   const passed = String.fromCodePoint(0x2705, 0x2705, 0x2705);
-//   const failed = String.fromCodePoint(0x274C, 0x274C, 0x274C);
-//   if (eqArrays(actual, expected)) {
-//     return console.log(`${passed} Assertion Passed: ${actual} === ${expected}`);
-//   }
-//   return console.log(`${failed} Assertion Failed: ${actual} !== ${expected}`);
-// };
-
 const assertArraysEqual = require('./assertArraysEqual');
-
-/*
-const without = function(source, itemsToRemove) {
-  let cleanArray = source;
-
-  for (let x = 0; x < itemsToRemove.length; x++) {
-    for (let y = 0; y < source.length; y++) {
-      if (source[y] !== itemsToRemove[x]) {
-        continue;
-      }
-
-      cleanArray = cleanArray.filter(function(removeValue) {
-        return removeValue !== source[y];
-      });
-
-    }
-  }
-  return console.log(cleanArray);
-};
-*/
 
 const without = function(source, itemsToRemove) {
   
