@@ -1,4 +1,4 @@
-const { eqArrays } = require('./index');
+const eqArrays = require('./eqArrays');
 
 const assertArraysEqual = function(actual, expected) {
   const passed = String.fromCodePoint(0x2705, 0x2705, 0x2705);
