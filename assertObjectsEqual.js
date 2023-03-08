@@ -13,9 +13,3 @@ const assertObjectsEqual = function(actual, expected) {
 
 module.exports = assertObjectsEqual;
 
-// Test Cases
-
-const objA = { a: '1', b: 2 };
-const objB = { b: 2, a: '1' };
-
-assertObjectsEqual(objA, objB);
