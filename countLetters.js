@@ -1,5 +1,3 @@
-const assertEqual = require('./assertEqual');
-
 const countLetters = function(sentanceString) {
   const countResult = {};
   const spacesRemoved = sentanceString.replaceAll(" ", "");
@@ -13,8 +11,4 @@ const countLetters = function(sentanceString) {
   return countResult;
 };
 
-// Test Cases
-
-const result = countLetters('LHL');
-assertEqual(result["L"], 2);
-assertEqual(result["H"], 1);
+module.exports = countLetters;
