@@ -23,4 +23,28 @@ describe("#eqArrays", () => {
     assert.deepEqual(eqArrays([], [1, 2, 3]), false);
   });
 
+  it('returns true, [[2, 3], [4]] equals [[2, 3], [4]]', () => {
+    assert.deepEqual(eqArrays([[2, 3], [4]], [[2, 3], [4]]), true);
+  });
+
+  it('returns false, [[2, 3], [4]] does not equal [[2, 3], [4, 5]]', () => {
+    assert.deepEqual(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]]), false);
+  });
+
+  it('returns false, [[2, 3], [4]] does not equal [[2, 3], 4]', () => {
+    assert.deepEqual(eqArrays([[2, 3], [4]], [[2, 3], 4]), false);
+  });
+
+  it('returns true, [[2, 3, [2, 4, 5]], [4]] equals [[2, 3, [2, 4, 5]], [4]] ', () => {
+    assert.deepEqual(eqArrays([[2, 3, [2, 4, 5]], [4]], [[2, 3, [2, 4, 5]], [4]]), true);
+  });
+
+  it('returns true, [[1, 2, [2, 3], [4]]] equals [[1, 2, [2, 3], [4]]] ', () => {
+    assert.deepEqual(eqArrays([[1, 2, [2, 3], [4]]], [[1, 2, [2, 3], [4]]]), true);
+  });
+
+  it('returns true, [[2], [4]] equals [[2], [4]]', () => {
+    assert.deepEqual(eqArrays([[2], [4]], [[2], [4]]), true);
+  });
+
 });
