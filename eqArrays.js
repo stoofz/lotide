@@ -1,4 +1,4 @@
-const eqArrays = function (array1, array2) {
+const eqArrays = function(array1, array2) {
 
   for (let x = 0; x < array1.length; x++) {
     if (Array.isArray(array1[x])) {
