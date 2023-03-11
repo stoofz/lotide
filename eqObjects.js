@@ -14,7 +14,7 @@ const eqObjects = function(object1, object2) {
     if (!Array.isArray(object1[prop1]) && typeof object1[prop1] === 'object') {
       if (eqObjects(object1[prop1], object2[prop1])) {
         continue;
-      };
+      }
     }
 
     if (Array.isArray(object1[prop1])) {

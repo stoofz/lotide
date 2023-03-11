@@ -23,7 +23,7 @@ describe("#findKey", () => {
       "Ora": { stars: 2 },
       "Akelarre": { stars: 3 }
     }, x => x.stars === 3), "Akaleri");
-  })
+  });
 
   it("returns the key undefined from object when value can't be found", () => {
     assert.deepEqual(findKey({
@@ -34,6 +34,6 @@ describe("#findKey", () => {
       "Ora": { stars: 2 },
       "Akelarre": { stars: 3 }
     }, x => x.stars === 5), undefined);
-  })
+  });
 
 });
